@@ -11,6 +11,8 @@ namespace Proba
         static void Main(string[] args)
         {
             Console.WriteLine("пошел нахуй");
+            Console.WriteLine("пошел нахуй2");
+
         }
     }
 }

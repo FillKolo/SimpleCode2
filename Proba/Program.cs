@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace Proba
 {
+
+    // Цикл for
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("пошел нахуй");
-            Console.WriteLine("пошел нахуй2");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+
 
         }
     }

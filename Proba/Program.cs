@@ -10,20 +10,72 @@ namespace Proba
     {
         static void Main(string[] args)
         {
+           
+            Console.Write("Введите высоту треугольника: ");
+            int height = int.Parse(Console.ReadLine());
+       /*
+            for (int i = 0; i < height; i++)
+			{
+                for (int j = 0; j <= i; j++)
+			    {
+                    Console.Write("*");
+			    }
 
-            for (int i = 0; i < 10; i++) 
+                Console.WriteLine();
+			}
+
+
+            for (int i = height; i > 0; i--)
+			{
+
+                for (int j = 0; j < i; j++)
+			    {
+                    Console.Write("*");
+			    }
+
+                Console.WriteLine();
+			}
+
+            */
+
+
+             for (int i = 0; i < height; i++)
             {
-                string msg = Console.ReadLine();
-                if (msg == "exit")
-                {
-                    break;
-                }
+                for (int j = 0; j < i; j++)
+			    {
+                    Console.Write(" ");
+			    }
 
-                Console.WriteLine(i);
-            }   
-                
+                for (int n = height; n > i; n--)
+			    {
+                    Console.Write("*");
+			    }
 
-            Console.ReadLine();
+            
+                Console.WriteLine();
+            }
+
+           Console.WriteLine();
+           Console.WriteLine();
+
+            for (int i = height; i >= 0; i--)
+			{
+
+                for (int j = 0; j < i; j++)
+			    {
+                    Console.Write(" ");
+			    }
+
+                for (int n = height; n > i; n--)
+			    {
+                    Console.Write("*");
+			    }
+
+                Console.WriteLine();
+			}
+
+			
+
 
         }
     }

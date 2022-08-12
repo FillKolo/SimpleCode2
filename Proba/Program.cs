@@ -9,49 +9,76 @@ namespace Proba
 
     internal class Programnet
     {
+
         static void Main(string[] args)
         {
+            int[] myArray = new int[5] {5,4,3,1,2};
+            Random random = new Random();
+            int conutValueMax = 0;
+            int conutValueMin = 0;
 
-            int [] myArray = new int[]
+            foreach (int item in myArray)
             {
-                1, 412, 4, 98, 76, 13, 14, 18, 32, 5
-            };
-
-            Array.Sort(myArray);
-
-            int EvenNumber = 0;
-            int OddNumber = 0;
-
-            foreach (int i in myArray)
-                if (i % 2 == 0)
+                if (item <= myArray.Last())
                 {
-                    EvenNumber++;
-                }
-            else
-                {
-                    OddNumber++;  
+                     conutValueMax++;
                 }
 
-            int[] arrayEvenNumber = new int[EvenNumber];
-            int[] arrayOddNumber = new int[OddNumber];
-            int j = 0;
-            int k = 0;
-
-            foreach (var item in myArray)
-            {
-                if (item % 2 == 0)
+                if (item <= myArray.First() & item < myArray.Last())
                 {
-                    arrayEvenNumber[j] = item;
-                    j++;
-                }
-                else
-                {
-                    arrayOddNumber[k] = item;
-                    k++;
-                }
+                    conutValueMin++;
+                }    
             }
-            Console.WriteLine(arrayEvenNumber);
-            Console.WriteLine(arrayOddNumber);
+
+
+            if (conutValueMax == myArray.Length)
+            {
+                Console.WriteLine("Массив задан упорядочно по возрастанию");
+            }    
+
+            if (conutValueMin == myArray.Length)
+            {
+                Console.WriteLine("Массив задан упорядочно по убыванию");
+            }    
+
+            if (myArray.Length > conutValueMax & myArray.Length > conutValueMin)
+            { 
+                Console.WriteLine("Массив задан хаотично");
+            }
+
+
+
+            Console.ReadLine();
+
+            /*
+for (int i = 0; i < myArray.Length; i++)
+{
+    myArray[i] = random.Next(5);
+} */
+
+            /*
+            string words = Console.ReadLine();
+ 
+            int counterVowel = 0;
+            int value = 0;
+          
+            string [] words2 = words.Split('a', 'y', 'i', 'u', 'o', 'e');
+            if (words2[words2.Length-1] == "")
+            {
+                counterVowel = words.Length - (words2.Length-1);
+                
+            }
+            else
+            {
+                counterVowel = words.Length - words2.Length;
+                
+            }
+            
+            Console.WriteLine("Количество гласных " + counterVowel);
+            Console.WriteLine("ПРоцент соотношения " + value);
+            Console.ReadLine(); */
+
+
         }
 
 

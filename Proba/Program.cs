@@ -82,18 +82,15 @@ namespace Proba
 
         static void Main(string[] args)
         {
-            /*
+            
             string ABC = "Введите количество символов";
             Console.WriteLine("Введите количество символов");
-
-
             Write(ABC);
-            Console.WriteLine("Пятух");  */
+            Console.WriteLine("Пятух");  
 
 
 
             int[] myArrayInitial2 = new int[4];
-
             FoundFirstArray(myArrayInitial2);
 
 

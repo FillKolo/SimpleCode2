@@ -10,6 +10,24 @@ namespace Proba
     internal class Programnet
     {
 
+        static void FoundFirstArray(int[] myArray)
+
+        {
+            //Создаем изначальный массив и заполняем его случайными элементами
+            int[] myArrayInitial = new int[10];
+            Random random = new Random();
+
+            for (int i = 0; i < myArrayInitial.Length; i++)
+            {
+                myArrayInitial[i] = random.Next(-5, 5);
+            }
+
+            int firstElement = myArrayInitial.FirstOrDefault();
+            Console.WriteLine(firstElement);
+        }
+
+        
+
         static void Write(string ABC)
 
         {
@@ -19,7 +37,6 @@ namespace Proba
 
 
             {
-                //Console.WriteLine("Введите количество символов, на которое хотите умножить");
                 string strPersonWrite2 = Console.ReadLine();
                 bool strPersonWrite22 = int.TryParse(strPersonWrite2, out result);
                 if (strPersonWrite22 == true)
@@ -33,7 +50,6 @@ namespace Proba
                 }
 
             }
-
 
 
             int boolCharPersonWrite = 0;
@@ -66,14 +82,26 @@ namespace Proba
 
         static void Main(string[] args)
         {
-
+            /*
             string ABC = "Введите количество символов";
             Console.WriteLine("Введите количество символов");
 
 
             Write(ABC);
-            Console.WriteLine("Пятух");
+            Console.WriteLine("Пятух");  */
+
+
+
+            int[] myArrayInitial2 = new int[4];
+
+            FoundFirstArray(myArrayInitial2);
+
+
             Console.ReadLine();
+
+
+
+
 
         }
 

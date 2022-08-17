@@ -10,74 +10,70 @@ namespace Proba
     internal class Programnet
     {
 
-        static void Main(string[] args)
-        {
-            int[] myArray = new int[5] {5,4,3,1,2};
-            Random random = new Random();
-            int conutValueMax = 0;
-            int conutValueMin = 0;
+        static void Write(string ABC)
 
-            foreach (int item in myArray)
+        {
+            int boolStrPersonWrite = 0;
+            int result = 0;
+            while (boolStrPersonWrite == 0)
+
+
             {
-                if (item <= myArray.Last())
+                //Console.WriteLine("Введите количество символов, на которое хотите умножить");
+                string strPersonWrite2 = Console.ReadLine();
+                bool strPersonWrite22 = int.TryParse(strPersonWrite2, out result);
+                if (strPersonWrite22 == true)
                 {
-                     conutValueMax++;
+                    Console.WriteLine("Вы успешно ввели количество, теперь задайте символ");
+                    boolStrPersonWrite++;
+                }
+                else
+                {
+                    Console.WriteLine("Введите корректное целочисленное значение");
                 }
 
-                if (item <= myArray.First() & item < myArray.Last())
+            }
+
+
+
+            int boolCharPersonWrite = 0;
+            char result2 = ' ';
+            while (boolCharPersonWrite == 0)
+            {
+                string charPersonWrite22 = Console.ReadLine();
+                bool boolCharPersonWrite222 = char.TryParse(charPersonWrite22, out result2);
+                if (boolCharPersonWrite222 == true)
                 {
-                    conutValueMin++;
+                    Console.Write("Все введено корректно. Итог вашей строки ");
+                    boolCharPersonWrite++;
+                }
+
+                else
+                {
+                    Console.WriteLine("Необходимо ввести один символ");
                 }    
+
+            }
+
+            for (int i = 0; i < result; i++)
+            {
+                Console.Write(result2);
             }
 
 
-            if (conutValueMax == myArray.Length)
-            {
-                Console.WriteLine("Массив задан упорядочно по возрастанию");
-            }    
-
-            if (conutValueMin == myArray.Length)
-            {
-                Console.WriteLine("Массив задан упорядочно по убыванию");
-            }    
-
-            if (myArray.Length > conutValueMax & myArray.Length > conutValueMin)
-            { 
-                Console.WriteLine("Массив задан хаотично");
-            }
+        }
 
 
+        static void Main(string[] args)
+        {
 
+            string ABC = "Введите количество символов";
+            Console.WriteLine("Введите количество символов");
+
+
+            Write(ABC);
+            Console.WriteLine("Пятух");
             Console.ReadLine();
-
-            /*
-for (int i = 0; i < myArray.Length; i++)
-{
-    myArray[i] = random.Next(5);
-} */
-
-            /*
-            string words = Console.ReadLine();
- 
-            int counterVowel = 0;
-            int value = 0;
-          
-            string [] words2 = words.Split('a', 'y', 'i', 'u', 'o', 'e');
-            if (words2[words2.Length-1] == "")
-            {
-                counterVowel = words.Length - (words2.Length-1);
-                
-            }
-            else
-            {
-                counterVowel = words.Length - words2.Length;
-                
-            }
-            
-            Console.WriteLine("Количество гласных " + counterVowel);
-            Console.WriteLine("ПРоцент соотношения " + value);
-            Console.ReadLine(); */
-
 
         }
 
